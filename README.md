@@ -8,6 +8,8 @@ Truss is an open-source model serving framework developed by Baseten. It allows 
 
 ## Deploying Alpaca-7B
 
+_As of today, Baseten requires a Plan subscription to get GPU resources for your model. This won't be the case soon but for now, feel free to dm [@aqaderb](https://twitter.com/aqaderb) or [@aaronrelph](https://twitter.com/aaronrelph) on Twitter if you want Llama __now__ and we'll set you up with some GPU compute_
+
 To deploy the Alpaca-7B Truss, you'll need to follow these steps:
 
 1. __Prerequisites__: Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup).
