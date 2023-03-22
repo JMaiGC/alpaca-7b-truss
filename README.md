@@ -21,7 +21,7 @@ pip install --upgrade baseten truss
 ```
 import truss
 
-alpaca7b_truss = truss.load("path/to/llama7b_truss")
+alpaca7b_truss = truss.load("path/to/alpaca7b_truss")
 ```
 
 4. __Log in to Baseten__: Log in to your Baseten account using your API key (key found [here](https://app.baseten.co/settings/account/api_keys)):
