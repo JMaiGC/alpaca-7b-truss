@@ -10,33 +10,33 @@ Truss is an open-source model serving framework developed by Baseten. It allows 
 
 To deploy the Alpaca-7B Truss, you'll need to follow these steps:
 
-1. *Prerequisites*: Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup).
+1. __Prerequisites__: Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup).
 
-2. *Install Truss and the Baseten Python client*: If you haven't already, install the Baseten Python client and Truss in your development environment using:
+2. __Install Truss and the Baseten Python client__: If you haven't already, install the Baseten Python client and Truss in your development environment using:
 ```
 pip install --upgrade baseten truss
 ```
 
-3. *Load the Alpaca-7B Truss*: Assuming you've cloned this repo, spin up an IPython shell and load the Truss into memory:
+3. __Load the Alpaca-7B Truss__: Assuming you've cloned this repo, spin up an IPython shell and load the Truss into memory:
 ```
 import truss
 
-llama7b_truss = truss.load("path/to/llama7b_truss")
+alpaca7b_truss = truss.load("path/to/llama7b_truss")
 ```
 
-4. *Log in to Baseten*: Log in to your Baseten account using your API key (key found [here](https://app.baseten.co/settings/account/api_keys)):
+4. __Log in to Baseten__: Log in to your Baseten account using your API key (key found [here](https://app.baseten.co/settings/account/api_keys)):
 ```
 import baseten
 
 baseten.login("PASTE_API_KEY_HERE")
 ```
 
-5. *Deploy the Llama-7b Truss*: Deploy the Llama-7b Truss to Baseten with the following command:
+5. __Deploy the Alpaca-7B Truss__: Deploy the Alpaca-7B Truss to Baseten with the following command:
 ```
-baseten.deploy(llama7b_truss)
+baseten.deploy(alpaca7b_truss)
 ```
 
-Once your Truss is deployed, you can start using the Llama-7b model through the Baseten platform! Navigate to the Baseten UI to watch the model build and deploy and invoke it via the REST API.
+Once your Truss is deployed, you can start using the Alpaca-7B model through the Baseten platform! Navigate to the Baseten UI to watch the model build and deploy and invoke it via the REST API.
 
 ## Alpaca-7B API Documentation
 This section provides an overview of the Alpaca-7B API, its parameters, and how to use it. The API consists of a single route named  `predict`, which you can invoke to generate text based on the provided instruction.
@@ -44,11 +44,11 @@ This section provides an overview of the Alpaca-7B API, its parameters, and how 
 ### API Route: `predict`
 The predict route is the primary method for generating text completions based on a given instruction. It takes several parameters:
 
-- *instruction*: The input text that you want the model to generate a response for.
-- *temperature* (optional, default=0.1): Controls the randomness of the generated text. Higher values produce more diverse results, while lower values produce more deterministic results.
-- *top_p* (optional, default=0.75): The cumulative probability threshold for token sampling. The model will only consider tokens whose cumulative probability is below this threshold.
-- *top_k* (optional, default=40): The number of top tokens to consider when sampling. The model will only consider the top_k highest-probability tokens.
-- *num_beams* (optional, default=4): The number of beams used for beam search. Increasing this value can result in higher-quality output but will increase the computational cost.
+- __instruction__: The input text that you want the model to generate a response for.
+- __temperature__ (optional, default=0.1): Controls the randomness of the generated text. Higher values produce more diverse results, while lower values produce more deterministic results.
+- __top_p__ (optional, default=0.75): The cumulative probability threshold for token sampling. The model will only consider tokens whose cumulative probability is below this threshold.
+- __top_k__ (optional, default=40): The number of top tokens to consider when sampling. The model will only consider the top_k highest-probability tokens.
+- __num_beams__ (optional, default=4): The number of beams used for beam search. Increasing this value can result in higher-quality output but will increase the computational cost.
 
 The API also supports passing any parameter supported by Huggingface's `Transformers.generate`.
 
