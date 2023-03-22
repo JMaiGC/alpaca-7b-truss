@@ -12,7 +12,9 @@ _As of today, Baseten requires a Plan subscription to get GPU resources for your
 
 To deploy the Alpaca-7B Truss, you'll need to follow these steps:
 
-1. __Prerequisites__: Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup).
+1. __Prerequisites__: 
+- _Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup)._
+- _Note that as of today, Baseten requires a Business Plan subscription to get GPU resources for your model. However, this won't be the case soon. If you need LLaMa now and want to access GPU compute, please feel free to send a direct message to [@aqaderb](https://twitter.com/aqaderb) or [@aaronrelph](https://twitter.com/aaronrelph) on Twitter, and we'll help you set it up._
 
 2. __Install Truss and the Baseten Python client__: If you haven't already, install the Baseten Python client and Truss in your development environment using:
 ```
