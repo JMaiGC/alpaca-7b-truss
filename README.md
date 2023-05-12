@@ -1,6 +1,6 @@
-## Alpaca-7B Truss
+# Alpaca-7B Truss
 
-This is a [Truss](https://truss.baseten.co/) for Alpaca-7B, a fine-tuned variant of Llama-7B. Llama is a family of language models released by Meta. This README will walk you through how to deploy this Truss on Baseten to get your own instance of Alpaca-7B.
+This is a [Truss](https://truss.baseten.co/) for Alpaca-7B, a fine-tuned variant of LLaMA-7B. LLaMA is a family of language models released by Meta. This README will walk you through how to deploy this Truss on Baseten to get your own instance of Alpaca-7B.
 
 ## Truss
 
@@ -10,9 +10,7 @@ Truss is an open-source model serving framework developed by Baseten. It allows 
 
 To deploy the Alpaca-7B Truss, you'll need to follow these steps:
 
-1. __Prerequisites__: 
-- _Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup)._
-- _Note that as of today, Baseten requires a Business Plan subscription to get GPU resources for your model. However, this won't be the case soon. If you need LLaMa now and want to access GPU compute, please feel free to send a direct message to [@aqaderb](https://twitter.com/aqaderb) or [@aaronrelph](https://twitter.com/aaronrelph) on Twitter, and we'll help you set it up._
+1. __Prerequisites__: Make sure you have a Baseten account and API key. You can sign up for a Baseten account [here](https://app.baseten.co/signup).
 
 2. __Install Truss and the Baseten Python client__: If you haven't already, install the Baseten Python client and Truss in your development environment using:
 ```
@@ -40,10 +38,10 @@ baseten.deploy(alpaca7b_truss)
 
 Once your Truss is deployed, you can start using the Alpaca-7B model through the Baseten platform! Navigate to the Baseten UI to watch the model build and deploy and invoke it via the REST API.
 
-## Alpaca-7B API Documentation
+## Alpaca-7B API documentation
 This section provides an overview of the Alpaca-7B API, its parameters, and how to use it. The API consists of a single route named  `predict`, which you can invoke to generate text based on the provided instruction.
 
-### API Route: `predict`
+### API route: `predict`
 The predict route is the primary method for generating text completions based on a given instruction. It takes several parameters:
 
 - __instruction__: The input text that you want the model to generate a response for.
@@ -54,7 +52,7 @@ The predict route is the primary method for generating text completions based on
 
 The API also supports passing any parameter supported by Huggingface's `Transformers.generate`.
 
-#### Example Usage
+## Example usage
 
 You can use the `baseten` model package to invoke your model from Python
 ```
@@ -77,6 +75,7 @@ You can also invoke your model via a REST API
 ```
 curl -X POST " https://app.baseten.co/models/YOUR_MODEL_ID/predict" \
      -H "Content-Type: application/json" \
+     -H 'Authorization: Api-Key {YOUR_API_KEY}' \
      -d '{
            "prompt": "What's the meaning of life?",
            "temperature": 0.1,
