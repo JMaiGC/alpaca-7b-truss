@@ -1,6 +1,6 @@
 bundled_packages_dir: packages
 data_dir: data
-description: Instruction-tuned version of Llama 7B
+description: Generate text from a instructional prompt with this tuned version of LLaMA 7B.
 environment_variables: {}
 examples_filename: examples.yaml
 external_package_dirs: []
