@@ -48,7 +48,7 @@ class Model:
     ### Response:
     """
     
-    def forward(self, instruction, temperature=0.1, top_p=0.75, top_k=40, num_beams=4, **kwargs):
+    def forward(self, instruction, temperature=0.1, top_p=0.75, top_k=40, num_beams=2, **kwargs):
         prompt = self.generate_prompt(instruction)
         inputs = self._tokenizer(prompt, return_tensors="pt")
         input_ids = inputs["input_ids"].to("cuda")
