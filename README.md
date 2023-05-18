@@ -1,3 +1,5 @@
+[![Deploy to Baseten](https://user-images.githubusercontent.com/2389286/236301770-16f46d4f-4e23-4db5-9462-f578ec31e751.svg)](https://app.baseten.co/explore/alpaca)
+
 # Alpaca-7B Truss
 
 This is a [Truss](https://truss.baseten.co/) for Alpaca-7B, a fine-tuned variant of LLaMA-7B. LLaMA is a family of language models released by Meta. This README will walk you through how to deploy this Truss on Baseten to get your own instance of Alpaca-7B.
